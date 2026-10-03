@@ -8,7 +8,6 @@ name: Deploy to the server (FTP)
 #   FTP_SERVER_DIR (REQUIRED, variable or secret): the website's folder relative to the FTP login, ending in /
 #   Variables:
 #              FTP_PROTOCOL    (ftps or ftp — default ftps)
-#              DEPLOY_ENABLED  (set to true to deploy automatically on every push to main)
 # You can always run it by hand from the Actions tab ("Run workflow").
 
 on:
@@ -22,7 +21,6 @@ concurrency:
 
 jobs:
   deploy:
-    if: github.event_name == 'workflow_dispatch' || vars.DEPLOY_ENABLED == 'true'
     runs-on: ubuntu-latest
     env:
       # FTP_SERVER_DIR may be saved as a variable or a secret; either works.

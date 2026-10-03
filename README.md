@@ -16,9 +16,9 @@ In the repo, go to **Settings → Secrets and variables → Actions**.
 
 - **Secrets:** `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`
 - **Variables:**
-  - `FTP_SERVER_DIR` (required): the website folder relative to where FTP logs in, ending in `/` (usually `public_html/`). The deploy refuses to run without it.
+  - `FTP_SERVER_DIR` (required, as a variable or a secret): the website folder relative to where FTP logs in, ending in `/` (usually `public_html/`). The deploy refuses to run without it.
   - `FTP_PROTOCOL`: `ftps` by default. Set it to `ftp` only if the host doesn't support FTPS.
-  - `DEPLOY_ENABLED`: set to `true` to deploy on every push. Until then, deploy by hand from **Actions → Deploy to the server → Run workflow**.
+  - Every push to `main` deploys. You can also run it by hand from **Actions → Deploy to the server → Run workflow**.
 
 The first deploy uploads everything. After that, only changed files are sent.
 
