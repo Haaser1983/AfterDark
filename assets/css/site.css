@@ -117,7 +117,8 @@ h1, h2, h3 { margin: 0; font-weight: 500; }
   font: italic 500 clamp(3.25rem, 9vw, 7.25rem)/.88 var(--display);
   letter-spacing: -.035em; margin-left: -.04em;
 }
-.hero__tag { margin: 14px 0 0; font-size: clamp(1.0625rem, 1.8vw, 1.25rem); color: var(--muted); max-width: 40ch; }
+.hero__by { margin: clamp(22px, 2.6vw, 34px) 0 0; font: italic 500 clamp(1.25rem, 2.2vw, 1.625rem)/1.2 var(--display); color: var(--accent); }
+.hero__tag { margin: 6px 0 0; font-size: clamp(1.0625rem, 1.8vw, 1.25rem); color: var(--muted); max-width: 40ch; }
 
 .worlds {
   display: flex; gap: 6px; max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto;

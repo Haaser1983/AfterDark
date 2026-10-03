@@ -50,6 +50,7 @@ function cached(string $key, callable $fn): mixed
 function site_defaults(): array
 {
     return [
+        'site_name' => 'After Dark Romance',
         'author' => [
             'name' => 'Eliza A. Penn',
             'tagline' => '',

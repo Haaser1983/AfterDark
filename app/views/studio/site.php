@@ -8,7 +8,8 @@
 
   <section class="panel">
     <h2>You</h2>
-    <?= f_text('name', 'Pen name', $a['name']) ?>
+    <?= f_text('site_name', 'Site name', $site['site_name'], 'The big name at the top of the site and in browser tabs.') ?>
+    <?= f_text('name', 'Pen name', $a['name'], 'Shown as “Books by …”, on covers and on the About page.') ?>
     <?= f_text('tagline', 'Tagline', $a['tagline'], 'Under your name on the home page and in the footer.') ?>
     <?= f_area('intro', 'Short intro', $a['intro'], 'Two or three sentences for the home page.', 4) ?>
     <?= f_area('bio', 'Full bio', $a['bio'], 'For the About page. Blank line between paragraphs. If empty, the short intro is used.', 10) ?>

@@ -449,6 +449,7 @@ function studio_site(): void
             }
         }
         $updated = array_replace($site, [
+            'site_name' => post_str('site_name', 120) ?: $site['site_name'],
             'author' => array_replace($site['author'], [
                 'name' => post_str('name', 120) ?: $site['author']['name'],
                 'tagline' => post_str('tagline', 200),

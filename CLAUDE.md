@@ -1,4 +1,4 @@
-# Eliza A. Penn — author website
+# After Dark Romance — Eliza A. Penn's author website
 
 This repo is the live site for **Eliza A. Penn** (Liz), a romance author. It's a small PHP site with no database. **All content lives in JSON files under `content/`**, and editing those files is how the site gets updated.
 
@@ -19,7 +19,7 @@ This repo is the live site for **Eliza A. Penn** (Liz), a romance author. It's a
 
 ## Content files
 
-`content/site.json` holds the author name, tagline, intro, bio, photo, social links, newsletter, ARC sign-up, the 18+ gate and a footer note.
+`content/site.json` holds the site name ("After Dark Romance", the big name at the top), the author pen name, tagline, intro, bio, photo, social links, newsletter, ARC sign-up, the 18+ gate and a footer note.
 
 `content/series/<slug>.json`:
 ```json

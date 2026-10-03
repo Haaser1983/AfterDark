@@ -2,9 +2,10 @@
 /** @var string $content */
 $site = site();
 $author = $site['author']['name'];
+$brand = $site['site_name'] ?: $author;
 $world = theme_key($world ?? 'nightfall');
 $accent = $accent ?? '';
-$titleTag = isset($pageTitle) ? $pageTitle . ' | ' . $author : $author . ($site['author']['tagline'] ? ' | ' . $site['author']['tagline'] : '');
+$titleTag = isset($pageTitle) ? $pageTitle . ' | ' . $brand : $brand . ' | Books by ' . $author;
 $desc = $metaDescription ?? plain_excerpt($site['author']['tagline'] ?: $site['author']['intro']);
 $nav = $nav ?? '';
 $canonical = absolute_url(route_path());
@@ -19,6 +20,7 @@ $mode = theme($world)['mode'];
 <link rel="canonical" href="<?= e($canonical) ?>">
 <meta property="og:type" content="<?= isset($book) ? 'book' : 'website' ?>">
 <meta property="og:title" content="<?= e($titleTag) ?>">
+<meta property="og:site_name" content="<?= e($brand) ?>">
 <?php if ($desc): ?><meta property="og:description" content="<?= e($desc) ?>"><?php endif; ?>
 <meta property="og:url" content="<?= e($canonical) ?>">
 <?php if (!empty($ogImage)): ?><meta property="og:image" content="<?= e($ogImage) ?>"><meta name="twitter:card" content="summary_large_image"><?php endif; ?>
@@ -32,7 +34,7 @@ $mode = theme($world)['mode'];
 <body class="world-<?= e($world) ?><?= !empty($isHome) ? ' is-home' : '' ?>" style="<?= e(theme_vars($world, $accent)) ?>">
 <a class="skip" href="#main">Skip to content</a>
 <header class="masthead">
-  <a class="wordmark" href="<?= e(url()) ?>"><?= e($author) ?></a>
+  <a class="wordmark" href="<?= e(url()) ?>"><?= e($brand) ?></a>
   <nav class="nav" aria-label="Main">
     <a href="<?= e(url('books')) ?>"<?= $nav === 'books' ? ' aria-current="page"' : '' ?>>Books</a>
     <a href="<?= e(url('about')) ?>"<?= $nav === 'about' ? ' aria-current="page"' : '' ?>>About</a>
@@ -49,8 +51,8 @@ $mode = theme($world)['mode'];
 <footer class="footer">
   <div class="footer__inner">
     <div class="footer__sign">
-      <p class="footer__name"><?= e($author) ?></p>
-      <?php if ($site['author']['tagline']): ?><p class="footer__tag"><?= e($site['author']['tagline']) ?></p><?php endif; ?>
+      <p class="footer__name"><?= e($brand) ?></p>
+      <p class="footer__tag">Books by <?= e($author) ?><?php if ($site['author']['tagline']): ?>. <?= e($site['author']['tagline']) ?><?php endif; ?></p>
     </div>
     <?php if ($site['newsletter']['enabled'] && $site['newsletter']['url']): ?>
     <div class="footer__join">

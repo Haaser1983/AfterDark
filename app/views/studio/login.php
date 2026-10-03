@@ -1,5 +1,5 @@
 <div class="login">
-  <p class="login__name"><?= e(site()['author']['name']) ?></p>
+  <p class="login__name"><?= e(site()['site_name'] ?: site()['author']['name']) ?></p>
   <h1 class="login__title">Studio</h1>
   <?php if (!$configured): ?>
     <div class="notice notice--warn">

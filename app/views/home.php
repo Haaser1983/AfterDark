@@ -4,7 +4,8 @@ $a = $site['author'];
 $featured = array_values($featured);
 ?>
 <section class="hero">
-  <h1 class="hero__name"><?= e($a['name']) ?></h1>
+  <h1 class="hero__name"><?= e($site['site_name'] ?: $a['name']) ?></h1>
+  <p class="hero__by">Books by <?= e($a['name']) ?></p>
   <?php if ($a['tagline']): ?><p class="hero__tag"><?= e($a['tagline']) ?></p><?php endif; ?>
 </section>
 
