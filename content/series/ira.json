@@ -1,0 +1,14 @@
+{
+    "slug": "ira",
+    "name": "Interspecies Relations Agency",
+    "kind": "universe",
+    "tagline": "Standalone sci-fi romances in one shared universe.",
+    "description": "The Interspecies Relations Agency matches human women with alien mates and ships them offworld. Every book is a new couple, a new planet, and a complete story, so you can start anywhere.",
+    "planned_count": null,
+    "theme": "nightfall",
+    "order": 2,
+    "visible": true,
+    "needs_review": [
+        "Tagline and description are drafts from the series notes"
+    ]
+}

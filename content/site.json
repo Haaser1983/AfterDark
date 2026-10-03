@@ -1,0 +1,45 @@
+{
+    "author": {
+        "name": "Eliza A. Penn",
+        "tagline": "Dark, high-heat romance with an earned happily ever after.",
+        "intro": "Eliza A. Penn writes high-heat romance across worlds: sci-fi and alien romance, omegaverse, why choose, romantasy, and dark romance. Her books are in Kindle Unlimited.",
+        "bio": "",
+        "photo": null,
+        "photo_alt": ""
+    },
+    "links": {
+        "amazon": "",
+        "goodreads": "",
+        "bookbub": "",
+        "facebook": "",
+        "instagram": "",
+        "tiktok": "",
+        "threads": "",
+        "email": ""
+    },
+    "newsletter": {
+        "enabled": false,
+        "heading": "",
+        "text": "",
+        "url": "",
+        "button": "Join the newsletter"
+    },
+    "arc": {
+        "enabled": false,
+        "heading": "",
+        "text": "",
+        "url": "",
+        "button": "Apply for the ARC team"
+    },
+    "age_gate": {
+        "enabled": false,
+        "text": ""
+    },
+    "footer_note": "",
+    "needs_review": [
+        "Tagline is a draft written from the series notes",
+        "Intro is a draft; add a real bio and photo if you want one",
+        "Add Goodreads, Facebook and Amazon author page links",
+        "Newsletter and ARC sign-up are off until there is a link"
+    ]
+}

@@ -1,0 +1,11 @@
+# Secrets and server-only state (never commit, never deployed)
+app/config.local.php
+storage/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.tmp-*

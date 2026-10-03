@@ -1,0 +1,107 @@
+{
+    "slug": "silence-for-the-siren",
+    "title": "Silence for the Siren",
+    "subtitle": "",
+    "series": "siren-unleashed",
+    "series_number": 1,
+    "series_label": "",
+    "status": "published",
+    "release_date": "2026-05-14",
+    "visible": true,
+    "featured": true,
+    "order": 1,
+    "tagline": "The textbooks call sirens monsters. Senna hasn’t said a word in seven years.",
+    "blurb": "Senna Reese hasn’t spoken in seven years. The first siren ever admitted to Luminara Academy, a school of crystal and enchanted stone on a mountain in Aethermoor, she talks in ASL and through a choker her twin brother built to give her thoughts a voice.\n\nThe textbooks call sirens monsters. Lars McNeil, vampire son of a powerful Council family, makes her a target on her second day. Raine Murdoch, a dark elf, hasn’t stopped watching her since she arrived.\n\nHer silence is protecting something. And something old is waking inside her.",
+    "excerpt": {
+        "title": "",
+        "text": ""
+    },
+    "genres": [
+        "Dark paranormal academy romance",
+        "Romantasy",
+        "Why choose"
+    ],
+    "tropes": [
+        "Dark academy",
+        "Bully romance",
+        "Enemies to lovers",
+        "Why choose",
+        "Siren heroine",
+        "Nonverbal heroine",
+        "Morally gray love interests"
+    ],
+    "heat": 2,
+    "heat_label": "",
+    "pov": "First person, present tense, multiple POV",
+    "length": "About 162,000 words",
+    "kindle_unlimited": true,
+    "links": {
+        "amazon": "",
+        "goodreads": "",
+        "bookbub": "",
+        "other": []
+    },
+    "content_warnings": "This is a dark bully romance. A full, detailed content warning list is coming.",
+    "characters": [
+        {
+            "name": "Senna Reese",
+            "role": "Siren",
+            "description": "The first of her kind at Luminara. Speaks in ASL and through the choker her brother built.",
+            "color": "#72E0C6",
+            "supporting": false,
+            "spoiler": false
+        },
+        {
+            "name": "Lars McNeil",
+            "role": "Vampire",
+            "description": "Son of a powerful Council family. Humiliates Senna in public on her second day.",
+            "color": "#8E1B2C",
+            "supporting": false,
+            "spoiler": false
+        },
+        {
+            "name": "Raine Murdoch",
+            "role": "Dark elf",
+            "description": "Hasn’t stopped watching her since she arrived.",
+            "color": "#4B3F8C",
+            "supporting": false,
+            "spoiler": false
+        },
+        {
+            "name": "Notty Reese",
+            "role": "Her twin brother",
+            "description": "Engineer, pure sunshine, and the one who built the choker.",
+            "color": "#E9C46A",
+            "supporting": true,
+            "spoiler": false
+        },
+        {
+            "name": "Freya Murdoch",
+            "role": "Her best friend",
+            "description": "Dark elf, Raine’s sister, loud and gloriously profane.",
+            "color": "#B05BA8",
+            "supporting": true,
+            "spoiler": false
+        },
+        {
+            "name": "Clifton Thorn",
+            "role": "Warlock",
+            "description": "Plant magic, a hard father, and a bond nobody saw coming.",
+            "color": "#3E7B3A",
+            "supporting": false,
+            "spoiler": true
+        }
+    ],
+    "theme": "siren",
+    "accent": "",
+    "cover": null,
+    "cover_alt": "",
+    "needs_review": [
+        "Replace the draft blurb and tagline with the official blurb",
+        "Upload the cover",
+        "Add the Amazon and Goodreads links (search links are used until then)",
+        "Confirm the release date (May 14, 2026 came from a third-party listing)",
+        "Add the full content warning list",
+        "Clifton Thorn is hidden behind a spoiler button. Keep, change or remove?"
+    ]
+}

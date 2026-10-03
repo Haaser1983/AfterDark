@@ -1,0 +1,45 @@
+{
+    "slug": "song-for-the-siren",
+    "title": "Song for the Siren",
+    "subtitle": "",
+    "series": "siren-unleashed",
+    "series_number": 2,
+    "series_label": "",
+    "status": "in-progress",
+    "release_date": null,
+    "visible": true,
+    "featured": false,
+    "order": 2,
+    "tagline": "Siren Unleashed continues. Book two is being written now.",
+    "blurb": "",
+    "excerpt": {
+        "title": "",
+        "text": ""
+    },
+    "genres": [
+        "Dark paranormal academy romance",
+        "Romantasy",
+        "Why choose"
+    ],
+    "tropes": [],
+    "heat": 4,
+    "heat_label": "",
+    "pov": "",
+    "length": "",
+    "kindle_unlimited": true,
+    "links": {
+        "amazon": "",
+        "goodreads": "",
+        "bookbub": "",
+        "other": []
+    },
+    "content_warnings": "",
+    "characters": [],
+    "theme": "siren",
+    "accent": "",
+    "cover": null,
+    "cover_alt": "",
+    "needs_review": [
+        "Decide whether to show book two before there is a release date (untick Visible to hide it)"
+    ]
+}

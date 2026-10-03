@@ -1,0 +1,132 @@
+{
+    "slug": "built-to-fall",
+    "title": "Built to Fall",
+    "subtitle": "",
+    "series": "ira",
+    "series_number": null,
+    "series_label": "An Interspecies Relations Agency standalone",
+    "status": "in-progress",
+    "release_date": null,
+    "visible": true,
+    "featured": true,
+    "order": 3,
+    "tagline": "On a world where everyone flies, she was built to fall.",
+    "blurb": "Wren Beckett has spent years making herself small enough to survive. So when the Interspecies Relations Agency accepts her application, she doesn’t care which planet she’s sent to. Anywhere is better than here.\n\nAnywhere turns out to be Aelithra: a jungle moon where the ground is death, every city floats in the sky, and the people have wings. Wren doesn’t. And the moment she arrives, three Seraphyn males catch her scent at once.\n\nRavek, the massive alpha every omega on Aelithra has rejected. Aelion, the gentle giant who has waited his whole life to have someone to care for. And Aelric, the beta who swears he never wanted a mate at all, while his feathers say otherwise.\n\nOn a moon ruled by queens, Wren is a scandal waiting to happen. But for the first time in years, being carried doesn’t feel like a cage. It feels like being cherished.\n\nAnd her males have no intention of ever letting her fall.",
+    "excerpt": {
+        "title": "",
+        "text": ""
+    },
+    "genres": [
+        "Sci-fi romance",
+        "Omegaverse",
+        "Why choose",
+        "Alien romance",
+        "Dark romance with a guaranteed HEA"
+    ],
+    "tropes": [
+        "Why choose",
+        "One heroine, three heroes",
+        "Possessive alien heroes",
+        "Touch her and die",
+        "Scent-matched mates",
+        "Fated mates",
+        "Found family",
+        "Gentle giant",
+        "Grumpy beta who ‘doesn’t want her’",
+        "Forced proximity",
+        "Fresh start",
+        "Healing from trauma",
+        "Political intrigue",
+        "Matriarchal alien society",
+        "HEA"
+    ],
+    "heat": null,
+    "heat_label": "Explicit, high spice",
+    "pov": "First person, present tense, the heroine and all three heroes",
+    "length": "",
+    "kindle_unlimited": true,
+    "links": {
+        "amazon": "",
+        "goodreads": "",
+        "bookbub": "",
+        "other": []
+    },
+    "content_warnings": "Domestic abuse (physical, emotional, and sexual, including intimate-partner rape) in the heroine’s past, shown through flashbacks. Coercive control. Trauma responses, including flashbacks, dissociation and fear responses. Kidnapping. Violence.\n\nExplicit sex. Omegaverse dynamics: heats, knotting, scent-bonding. Why choose / reverse harem.\n\nDark themes, guaranteed HEA.",
+    "characters": [
+        {
+            "name": "Wren Beckett",
+            "role": "Heroine",
+            "description": "Petite, freckled head to toe, bright green eyes and rainbow neon curls. Covered in tattoos of her own fantasy art, dragons and beasts she drew long before she knew real ones existed. Quippy, chaotic, and slowly remembering how loud she used to be.",
+            "color": "rainbow",
+            "supporting": false,
+            "spoiler": false
+        },
+        {
+            "name": "Ravek",
+            "role": "Alpha, pack leader",
+            "description": "The biggest, most dangerous male in the pack. Ruby feathers, gold eyes, the most impressive horns of the three. Speaks in fragments, and his favorite word is “Mine.”",
+            "color": "#B3122E",
+            "supporting": false,
+            "spoiler": false
+        },
+        {
+            "name": "Aelion",
+            "role": "Alpha",
+            "description": "The cinnamon-roll giant. Emerald feathers, silver eyes flecked with blue, and the warm heart that holds the pack together. Lives to provide.",
+            "color": "#1E8A5A",
+            "supporting": false,
+            "spoiler": false
+        },
+        {
+            "name": "Aelric",
+            "role": "Beta",
+            "description": "Aelion’s younger brother and the fastest flier. Sapphire feathers and a beta with an alpha’s possessiveness, who insists he doesn’t want this while his plumes betray him every time.",
+            "color": "#1F3F9E",
+            "supporting": false,
+            "spoiler": false
+        },
+        {
+            "name": "Princess Rhyael",
+            "role": "Rebellious royal heir",
+            "description": "Silver, with an oil-slick shimmer. Becomes Wren’s friend.",
+            "color": "iridescent",
+            "supporting": true,
+            "spoiler": false
+        },
+        {
+            "name": "Nadia Baptiste",
+            "role": "Fellow traveler",
+            "description": "Warm, regal and maternal. Wren’s chosen-family mother figure.",
+            "color": "#C98B4E",
+            "supporting": true,
+            "spoiler": false
+        },
+        {
+            "name": "Iris Sato",
+            "role": "Fellow traveler",
+            "description": "Shy and bookish, matched with a gentle-giant pack.",
+            "color": "#7FA8C9",
+            "supporting": true,
+            "spoiler": false
+        },
+        {
+            "name": "Captain Kate Morrow",
+            "role": "Transport captain",
+            "description": "No-nonsense, and calls Wren “kid.”",
+            "color": "#6B7280",
+            "supporting": true,
+            "spoiler": false
+        }
+    ],
+    "theme": "aelithra",
+    "accent": "",
+    "cover": null,
+    "cover_alt": "",
+    "needs_review": [
+        "Blurb is the draft from the project notes. Revise or approve",
+        "Pick the tagline (the other option: ‘She ran from a man who never let her go. Now three of them never will.’)",
+        "Approve the content warning wording",
+        "Release date, preorder link and cover when ready",
+        "Decide whether retailers label it #1.5 or ‘IRA universe’"
+    ]
+}

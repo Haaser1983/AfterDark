@@ -1,0 +1,54 @@
+name: Deploy to the server (FTP)
+
+# Pushes to main (from Claude, John, or the Studio's own commits) are checked and
+# uploaded over FTP. Only changed files are sent.
+#
+# Setup, in GitHub → Settings → Secrets and variables → Actions:
+#   Secrets:   FTP_SERVER, FTP_USERNAME, FTP_PASSWORD
+#   Variables: FTP_SERVER_DIR  (folder on the host, ending in /, e.g. public_html/ — default ./)
+#              FTP_PROTOCOL    (ftps or ftp — default ftps)
+#              DEPLOY_ENABLED  (set to true to deploy automatically on every push to main)
+# You can always run it by hand from the Actions tab ("Run workflow").
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ftp-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.event_name == 'workflow_dispatch' || vars.DEPLOY_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check PHP syntax
+        run: find . -name '*.php' -not -path './.git/*' -print0 | xargs -0 -n1 php -l > /dev/null
+
+      - name: Check content JSON
+        run: |
+          for f in content/*.json content/*/*.json; do
+            php -r 'json_decode(file_get_contents($argv[1]), true, 512, JSON_THROW_ON_ERROR);' "$f" || { echo "Invalid JSON: $f"; exit 1; }
+          done
+
+      - name: Upload over FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ${{ vars.FTP_PROTOCOL || 'ftps' }}
+          server-dir: ${{ vars.FTP_SERVER_DIR || './' }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            README.md
+            CLAUDE.md
+            docs/**
+            storage/**
+            app/config.local.php

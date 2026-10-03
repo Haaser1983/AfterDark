@@ -1,0 +1,48 @@
+{
+    "slug": "frozen-desires",
+    "title": "Frozen Desires",
+    "subtitle": "",
+    "series": "ira",
+    "series_number": 1,
+    "series_label": "Interspecies Relations Agency, book one",
+    "status": "published",
+    "release_date": null,
+    "visible": true,
+    "featured": true,
+    "order": 2,
+    "tagline": "Where the IRA universe begins: the ice world of Kryothera.",
+    "blurb": "Eliza A. Penn’s debut, and the first Interspecies Relations Agency novel. Jaz, the frozen world of Kryothera, and the Kryos.",
+    "excerpt": {
+        "title": "",
+        "text": ""
+    },
+    "genres": [
+        "Sci-fi romance",
+        "Alien romance"
+    ],
+    "tropes": [],
+    "heat": null,
+    "heat_label": "",
+    "pov": "",
+    "length": "",
+    "kindle_unlimited": true,
+    "links": {
+        "amazon": "",
+        "goodreads": "",
+        "bookbub": "",
+        "other": []
+    },
+    "content_warnings": "",
+    "characters": [],
+    "theme": "glacier",
+    "accent": "",
+    "cover": null,
+    "cover_alt": "",
+    "needs_review": [
+        "Add the official blurb (the current text is a placeholder)",
+        "Upload the cover",
+        "Add the Amazon and Goodreads links",
+        "Add the heat level, tropes, release date and content warnings",
+        "Add Jaz and the hero(es) to the cast if you want character cards"
+    ]
+}

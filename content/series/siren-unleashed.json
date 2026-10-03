@@ -1,0 +1,15 @@
+{
+    "slug": "siren-unleashed",
+    "name": "Siren Unleashed",
+    "kind": "series",
+    "tagline": "A dark paranormal academy romance. One siren, and a school that calls her kind monsters.",
+    "description": "Read in order, starting with *Silence for the Siren*. Bully romance, why choose, and a heroine coming into her power, with a happily ever after that has to be earned.",
+    "planned_count": 4,
+    "theme": "siren",
+    "order": 1,
+    "visible": true,
+    "needs_review": [
+        "Series tagline and description are drafts",
+        "Confirm the series name (the Amazon listing says Siren Unleashed)"
+    ]
+}
