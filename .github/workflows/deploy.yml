@@ -32,6 +32,15 @@ jobs:
           echo "::error::Set FTP_SERVER_DIR (variable or secret) to the website's folder, e.g. public_html/afterdarkromance.com/"
           exit 1
 
+      - name: Tidy the target folder
+        # Accepts "public_html/site.com", "/home2/user/public_html/site.com" etc.
+        # FTP logins start in the account's home folder, so make it relative and end it with /.
+        run: |
+          dir="$SERVER_DIR"
+          dir="$(printf '%s' "$dir" | sed -E 's#^/home[0-9]*/[^/]+/##; s#^/+##; s#/*$#/#')"
+          echo "Deploying to: $dir"
+          echo "SERVER_DIR=$dir" >> "$GITHUB_ENV"
+
       - uses: actions/checkout@v4
 
       - name: Check PHP syntax
