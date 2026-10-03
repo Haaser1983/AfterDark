@@ -5,7 +5,8 @@ name: Deploy to the server (FTP)
 #
 # Setup, in GitHub → Settings → Secrets and variables → Actions:
 #   Secrets:   FTP_SERVER, FTP_USERNAME, FTP_PASSWORD
-#   Variables: FTP_SERVER_DIR  (REQUIRED: the website's folder relative to the FTP login, ending in /, e.g. public_html/)
+#   FTP_SERVER_DIR (REQUIRED, variable or secret): the website's folder relative to the FTP login, ending in /
+#   Variables:
 #              FTP_PROTOCOL    (ftps or ftp — default ftps)
 #              DEPLOY_ENABLED  (set to true to deploy automatically on every push to main)
 # You can always run it by hand from the Actions tab ("Run workflow").
@@ -23,11 +24,14 @@ jobs:
   deploy:
     if: github.event_name == 'workflow_dispatch' || vars.DEPLOY_ENABLED == 'true'
     runs-on: ubuntu-latest
+    env:
+      # FTP_SERVER_DIR may be saved as a variable or a secret; either works.
+      SERVER_DIR: ${{ vars.FTP_SERVER_DIR || secrets.FTP_SERVER_DIR }}
     steps:
       - name: Check the target folder is set
-        if: vars.FTP_SERVER_DIR == ''
+        if: env.SERVER_DIR == ''
         run: |
-          echo "::error::Set the FTP_SERVER_DIR variable to the website's folder (e.g. public_html/) before deploying."
+          echo "::error::Set FTP_SERVER_DIR (variable or secret) to the website's folder, e.g. public_html/afterdarkromance.com/"
           exit 1
 
       - uses: actions/checkout@v4
@@ -48,7 +52,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ${{ vars.FTP_PROTOCOL || 'ftps' }}
-          server-dir: ${{ vars.FTP_SERVER_DIR }}
+          server-dir: ${{ env.SERVER_DIR }}
           exclude: |
             **/.git*
             **/.git*/**
