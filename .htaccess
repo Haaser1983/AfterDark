@@ -7,9 +7,11 @@ DirectoryIndex index.php
   # If the site lives in a subfolder, set RewriteBase to it, e.g. RewriteBase /v2/
   # RewriteBase /
 
-  # Force HTTPS (uncomment once the certificate is live)
-  # RewriteCond %{HTTPS} !=on
-  # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  # One canonical address: https://afterdarkromance.com (no www)
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 
   # Never serve code, content files, server-only storage or tools directly
   RewriteRule ^(app|content|storage|tools)(/|$) - [F,L]
