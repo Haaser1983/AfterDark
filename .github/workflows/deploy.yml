@@ -60,6 +60,8 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ${{ vars.FTP_PROTOCOL || 'ftps' }}
           server-dir: ${{ env.SERVER_DIR }}
+          # Fresh state file name: forces one full upload past a stale .ftp-deploy-sync-state.json
+          state-name: .ftp-deploy-state-v2.json
           exclude: |
             **/.git*
             **/.git*/**
