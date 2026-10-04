@@ -1,0 +1,27 @@
+name: Inspect FTP folders (read-only)
+
+# Manual only. Lists the folder layout the FTP login sees, so the deploy target can be set correctly.
+on:
+  workflow_dispatch:
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install lftp
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp > /dev/null
+      - name: List folders
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          PROTO: ${{ vars.FTP_PROTOCOL || 'ftps' }}
+        run: |
+          SSL="set ftp:ssl-allow true; set ftp:ssl-force true; set ssl:verify-certificate no;"
+          [ "$PROTO" = "ftp" ] && SSL="set ftp:ssl-allow false;"
+          lftp -u "$FTP_USERNAME,$FTP_PASSWORD" "$FTP_SERVER" -e "$SSL set net:max-retries 1; set net:timeout 20;
+            echo '== Login folder:'; pwd;
+            echo '== Top level:'; cls -1a;
+            echo '== Every index.php / deploy state file (4 levels deep):';
+            find -d 4 . | grep -E '(index\.php|\.ftp-deploy[^/]*\.json)$';
+            bye" 2>&1 | sed -E 's#//[^@]*@#//***@#'
