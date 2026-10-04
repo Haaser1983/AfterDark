@@ -22,6 +22,11 @@ jobs:
           lftp -u "$FTP_USERNAME,$FTP_PASSWORD" "$FTP_SERVER" -e "$SSL set net:max-retries 1; set net:timeout 20;
             echo '== Login folder:'; pwd;
             echo '== Top level:'; cls -1a;
-            echo '== Every index.php / deploy state file (4 levels deep):';
-            find -d 4 . | grep -E '(index\.php|\.ftp-deploy[^/]*\.json)$';
-            bye" 2>&1 | sed -E 's#//[^@]*@#//***@#'
+            echo '== Folders, 5 levels deep:';
+            find -d 5 .;
+            bye" 2>&1 | sed -E 's#//[^@]*@#//***@#' > listing.txt
+          sed -n '1,/== Folders/p' listing.txt
+          echo "== index.php and deploy-state files:"
+          grep -E '(index\.php|ftp-deploy[^/]*\.json)$' listing.txt || true
+          echo "== Folders under home2/ and public_html/ (first 40):"
+          grep -E '^\./(home2|public_html)/' listing.txt | grep '/$' | head -40 || true
