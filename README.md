@@ -16,7 +16,7 @@ In the repo, go to **Settings → Secrets and variables → Actions**.
 
 - **Secrets:** `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`
 - **Variables:**
-  - `FTP_SERVER_DIR` (required, as a variable or a secret): the website folder relative to where FTP logs in, ending in `/` (usually `public_html/`). The deploy refuses to run without it.
+  - `FTP_SERVER_DIR` (required, as a variable or a secret): the website folder relative to where the FTP login opens, ending in `/`. **For this site it is `./`**: the HostGator FTP account opens directly in `/home2/hiefcnte/public_html/afterdarkromance.com`. The deploy refuses to run without it.
   - `FTP_PROTOCOL`: `ftps` by default. Set it to `ftp` only if the host doesn't support FTPS.
   - Every push to `main` deploys. You can also run it by hand from **Actions → Deploy to the server → Run workflow**.
 
